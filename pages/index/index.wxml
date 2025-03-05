@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="main-content">
+    <view class="input-section">
+      <textarea 
+        class="input-box"
+        placeholder="请输入需要润色的文本"
+        value="{{inputText}}"
+        bindinput="handleInput"
+      ></textarea>
+    </view>
+
+    <view class="button-section">
+      <button 
+        class="submit-btn"
+        type="primary" 
+        loading="{{loading}}"
+        bindtap="handlePolish"
+      >{{loading ? '润色中...' : '开始润色'}}</button>
+    </view>
+
+    <view class="result-section" wx:if="{{polishedText}}">
+      <view class="result-title">润色结果：</view>
+      <view class="result-content">{{polishedText}}</view>
+      
+      <view class="tags-container" wx:if="{{tags.length}}">
+        <view class="tags-title">相关标签：</view>
+        <view class="tags-list">
+          <view class="tag" wx:for="{{tags}}" wx:key="index">#{{item}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 添加一个测试按钮，用于调试 -->
+<view wx:if="{{!showPage}}" style="padding: 20px;">
+  <button bindtap="onShow">显示页面</button>
+</view> 

@@ -1,0 +1,35 @@
+.history-list {
+  width: 100%;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  padding: 30rpx;
+}
+
+.history-item {
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  border-radius: 8rpx;
+}
+
+.history-time {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.history-content {
+  font-size: 28rpx;
+}
+
+.original-text {
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.polished-text {
+  color: #333;
+} 

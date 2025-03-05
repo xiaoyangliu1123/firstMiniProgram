@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="empty-tip" wx:if="{{!historyList.length}}">
+    暂无历史记录
+  </view>
+  
+  <view class="history-list" wx:else>
+    <view class="history-item" wx:for="{{historyList}}" wx:key="timestamp">
+      <view class="time">{{formatTime(item.timestamp)}}</view>
+      
+      <view class="content-box">
+        <view class="section">
+          <view class="label">原文本：</view>
+          <view class="text">{{item.original}}</view>
+        </view>
+        
+        <view class="section">
+          <view class="label">润色后：</view>
+          <view class="text">{{item.polished}}</view>
+        </view>
+
+        <view class="tags" wx:if="{{item.tags.length}}">
+          <view class="tag" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">#{{tag}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> 

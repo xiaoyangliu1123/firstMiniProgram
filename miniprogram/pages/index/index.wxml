@@ -1,0 +1,22 @@
+<view class="container">
+  <textarea 
+    class="input-box"
+    placeholder="请输入需要润色的文本"
+    value="{{inputText}}"
+    bindinput="handleInput"
+  ></textarea>
+
+  <button 
+    type="primary"
+    bindtap="handlePolish"
+  >开始润色</button>
+
+  <view class="result" wx:if="{{polishedText}}">
+    {{polishedText}}
+  </view>
+</view>
+
+<!-- 添加一个测试按钮，用于调试 -->
+<view wx:if="{{!showPage}}" style="padding: 20px;">
+  <button bindtap="onShow">显示页面</button>
+</view> 
