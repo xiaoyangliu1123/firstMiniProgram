@@ -1,35 +1,45 @@
 .history-list {
-  width: 100%;
+  padding: 24rpx;
 }
 
 .empty-tip {
   text-align: center;
   color: #999;
-  padding: 30rpx;
+  padding: 120rpx 0;
+  font-size: 28rpx;
 }
 
 .history-item {
   background: #fff;
-  margin-bottom: 20rpx;
-  padding: 20rpx;
-  border-radius: 8rpx;
+  margin-bottom: 24rpx;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
 }
 
 .history-time {
   font-size: 24rpx;
   color: #999;
-  margin-bottom: 10rpx;
+  margin-bottom: 16rpx;
 }
 
 .history-content {
   font-size: 28rpx;
+  line-height: 1.6;
 }
 
 .original-text {
   color: #666;
-  margin-bottom: 10rpx;
+  margin-bottom: 16rpx;
+  padding: 16rpx;
+  background: #f8f8f8;
+  border-radius: 8rpx;
 }
 
 .polished-text {
   color: #333;
+  padding: 16rpx;
+  background: #f0f9f0;
+  border-radius: 8rpx;
+  border-left: 6rpx solid #07c160;
 } 

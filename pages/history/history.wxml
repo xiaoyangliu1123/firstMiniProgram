@@ -1,14 +1,20 @@
 <view class="container">
   <view class="history-list">
     <view wx:if="{{!historyList.length}}" class="empty-tip">
-      暂无历史记录
+      <text>暂无历史记录</text>
     </view>
     <view wx:else>
       <view class="history-item" wx:for="{{historyList}}" wx:key="timestamp">
-        <view class="history-time">{{item.timestamp}}</view>
+        <view class="history-time">{{formatTime(item.timestamp)}}</view>
         <view class="history-content">
-          <view class="original-text">{{item.original}}</view>
-          <view class="polished-text">{{item.polished}}</view>
+          <view class="original-text">
+            <text>原文：</text>
+            <view>{{item.original}}</view>
+          </view>
+          <view class="polished-text">
+            <text>润色后：</text>
+            <view>{{item.polished}}</view>
+          </view>
         </view>
       </view>
     </view>

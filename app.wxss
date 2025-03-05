@@ -2,12 +2,24 @@ page {
   background-color: #f6f6f6;
   font-size: 16px;
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  color: #333;
+  min-height: 100vh;
 }
 
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  padding: 24rpx;
   box-sizing: border-box;
-  padding: 30rpx;
+}
+
+/* 全局按钮样式 */
+button {
+  background: #07c160 !important;
+  color: white !important;
+  border-radius: 42rpx !important;
+  font-weight: normal !important;
+  box-shadow: 0 4rpx 12rpx rgba(7, 193, 96, 0.3);
+}
+
+button:active {
+  opacity: 0.8;
 } 
